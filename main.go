@@ -11,7 +11,7 @@ func pdf_hello(res http.ResponseWriter, req *http.Request) {
 	pdf := gopdf.GoPdf{}
 	pdf.Start(gopdf.Config{PageSize: *gopdf.PageSizeA4})
 	pdf.AddPage()
-	err := pdf.AddTTFFont("wts11", ".\\ttf\\Anonymous_Pro.ttf")
+	err := pdf.AddTTFFont("wts11", "./ttf/Anonymous_Pro.ttf")
 	if err != nil {
 		log.Print(err.Error())
 		return
